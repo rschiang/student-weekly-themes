@@ -1,0 +1,62 @@
+@weekly-blue-1: #72b3c0;
+@weekly-blue-2: #61a4b3;
+@weekly-violet: #313646;
+@weekly-white: #f9f9f9;
+@weekly-light-gray: #898989;
+@weekly-gray: #777;
+@weekly-dark-gray: #343434;
+@weekly-black-1: #333;
+@weekly-black-2: #2b2b2b;
+@weekly-black-3: #212121;
+
+@desktop: ~"only screen and (min-width: 1200px)";
+@widescreen: ~"only screen and (min-width: 1920px)";
+@hanzi-fonts: 'Source Han Sans TC', 'Pingfang TC', 'Microsoft Jhenghei';
+
+.weekly.home {
+    background: @weekly-white;
+    color: @weekly-black-2;
+    font-family: Montserrat, Avenir, @hanzi-fonts, Arial, sans-serif;
+
+    > .sidebar {
+        padding: 3em 4em;
+        @media @desktop {
+            position: absolute;
+            top: 0; left: 0;
+            padding: 4em;
+            width: 25%;
+        }
+    }
+
+    > .footer {
+        padding: 2em 4em;
+        @media @desktop {
+            position: absolute;
+            left: 0; bottom: 0;
+            padding: 3em 4em;
+        }
+    }
+
+    .site.title {
+        width: 20em;
+    }
+
+    .vendor.logo {
+        width: 15em;
+    }
+
+    @media @desktop {
+        padding-left: 25%;
+    }
+}
+
+html, body {
+    @media widescreen {
+        font-size: 21px; /* Zoom the entire page */
+    }
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}

@@ -1,0 +1,35 @@
+.weekly.home {
+  background: #f9f9f9;
+  color: #2b2b2b;
+  font-family: Montserrat, Avenir, 'Source Han Sans TC', 'Pingfang TC', 'Microsoft Jhenghei', Arial, sans-serif;
+}
+.weekly.home > .sidebar {
+  padding: 3em 4em;
+}
+@media only screen and (min-width: 1127px) {
+  .weekly.home > .sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 4em;
+    width: 25%;
+  }
+}
+.weekly.home > .footer {
+  padding: 2em 4em;
+}
+@media only screen and (min-width: 1127px) {
+  .weekly.home {
+    padding-left: 25%;
+  }
+}
+.weekly img {
+  height: auto;
+  max-width: 100%;
+}
+.weekly.site.title {
+  width: 20em;
+}
+.weekly.vendor.logo {
+  width: 15em;
+}
