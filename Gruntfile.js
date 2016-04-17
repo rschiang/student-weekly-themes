@@ -13,7 +13,10 @@ module.exports = function(grunt) {
         less: {
             development: {
                 options: {
-                    paths: ['src/']
+                    paths: ['src/'],
+                    plugins: [
+                        new (require('less-plugin-clean-css'))({ advanced: true, mediaMerging: true })
+                    ],
                 },
                 files: {
                     'assets/weekly.css': 'src/weekly.less'
