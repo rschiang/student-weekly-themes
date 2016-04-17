@@ -15,12 +15,17 @@
 
 @desktop: ~"only screen and (min-width: 1200px)";
 @widescreen: ~"only screen and (min-width: 1920px)";
+
 @hanzi-fonts: 'Source Han Sans TC', 'Pingfang TC', 'Microsoft Jhenghei';
+@weekly-fonts: Montserrat, Avenir, @hanzi-fonts, Arial, sans-serif;
+
+/* External webfont declaration */
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700);
 
 .weekly.home {
     background: @weekly-white;
     color: @weekly-black-2;
-    font-family: Montserrat, Avenir, @hanzi-fonts, Arial, sans-serif;
+    font-family: @weekly-fonts;
 
     > .sidebar {
         padding: 3em 4em;
@@ -62,6 +67,8 @@
 }
 
 .weekly.term {
+    font-family: @weekly-fonts;
+    font-weight: 700;
     margin: 2rem 0 0;
     padding: 0 1rem;
 }
