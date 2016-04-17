@@ -69,25 +69,25 @@
     transition: color @transition;
     overflow: hidden;
 
+    > .cover {
+        background: @weekly-gray center / cover;
+        display: block;
+        opacity: .67;
+        padding-bottom: 90%;
+        transition: opacity @transition;
+    }
+
     > .id {
         display: block;
         font-size: 1.5em;
         font-weight: bold;
         line-height: 1.2;
-        padding: .25em .5em .35em;
-    }
-
-    .photo {
-        width: auto;
-        height: 13.5em;
-        max-width: none;
-        opacity: .67;
-        transition: opacity @transition;
+        padding: .25em .5em;
     }
 
     &:hover {
         color: @weekly-black-1;
-        .photo {
+        > .cover {
             opacity: 1;
         }
     }
