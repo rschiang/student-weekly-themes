@@ -25,7 +25,7 @@
     > .sidebar {
         padding: 3em 4em;
         @media @desktop {
-            position: absolute;
+            position: fixed;
             top: 0; left: 0;
             padding: 4em;
             width: 25%;
@@ -42,7 +42,7 @@
     > .footer {
         padding: 2em 4em;
         @media @desktop {
-            position: absolute;
+            position: fixed;
             left: 0; bottom: 0;
             padding: 3em 4em;
         }
@@ -61,6 +61,11 @@
     }
 }
 
+.weekly.term {
+    margin: 2rem 0 0;
+    padding: 0 1rem;
+}
+
 .weekly.issue.card {
     background: @weekly-real-white;
     border-radius: @corner-radius;
@@ -75,14 +80,18 @@
         opacity: .67;
         padding-bottom: 90%;
         transition: opacity @transition;
+
+        &.without.image {
+            padding-bottom: 40%;
+        }
     }
 
     > .id {
         display: block;
         font-size: 1.5em;
         font-weight: bold;
-        line-height: 1.2;
-        padding: .25em .5em;
+        line-height: 2rem;
+        padding: .5rem 1rem;
     }
 
     &:hover {
