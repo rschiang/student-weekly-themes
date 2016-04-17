@@ -10,6 +10,9 @@
 @weekly-black-2: #2b2b2b;
 @weekly-black-3: #212121;
 
+@corner-radius: .25em;
+@transition: .28s ease;
+
 @desktop: ~"only screen and (min-width: 1200px)";
 @widescreen: ~"only screen and (min-width: 1920px)";
 @hanzi-fonts: 'Source Han Sans TC', 'Pingfang TC', 'Microsoft Jhenghei';
@@ -31,7 +34,7 @@
 
     > .content {
         padding: 0 1em;
-        @media desktop {
+        @media @desktop {
             padding: 1em;
         }
     }
@@ -60,15 +63,38 @@
 
 .weekly.issue.card {
     background: @weekly-real-white;
-    color: @weekly-black-1;
+    border-radius: @corner-radius;
+    color: @weekly-gray;
     display: block;
+    transition: color @transition;
+    overflow: hidden;
 
-    .id {
+    > .id {
         display: block;
         font-size: 1.5em;
         font-weight: bold;
+        line-height: 1.2;
         padding: .25em .5em .35em;
     }
+
+    .photo {
+        width: auto;
+        height: 13.5em;
+        max-width: none;
+        opacity: .67;
+        transition: opacity @transition;
+    }
+
+    &:hover {
+        color: @weekly-black-1;
+        .photo {
+            opacity: 1;
+        }
+    }
+}
+
+* {
+    box-sizing: border-box;
 }
 
 html, body {
