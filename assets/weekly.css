@@ -6,7 +6,7 @@
 .weekly.home > .sidebar {
   padding: 3em 4em;
 }
-@media only screen and (min-width: 1127px) {
+@media only screen and (min-width: 1200px) {
   .weekly.home > .sidebar {
     position: absolute;
     top: 0;
@@ -18,18 +18,33 @@
 .weekly.home > .footer {
   padding: 2em 4em;
 }
-@media only screen and (min-width: 1127px) {
+@media only screen and (min-width: 1200px) {
+  .weekly.home > .footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 3em 4em;
+  }
+}
+.weekly.home .site.title {
+  width: 20em;
+}
+.weekly.home .vendor.logo {
+  width: 15em;
+}
+@media only screen and (min-width: 1200px) {
   .weekly.home {
     padding-left: 25%;
   }
 }
-.weekly img {
+@media widescreen {
+  html,
+  body {
+    font-size: 21px;
+    /* Zoom the entire page */
+  }
+}
+img {
   height: auto;
   max-width: 100%;
-}
-.weekly.site.title {
-  width: 20em;
-}
-.weekly.vendor.logo {
-  width: 15em;
 }
