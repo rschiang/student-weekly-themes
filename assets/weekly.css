@@ -37,6 +37,17 @@
     padding-left: 25%;
   }
 }
+.weekly.issue.card {
+  background: #fff;
+  display: block;
+  padding: 2em 2em 0;
+}
+.weekly.issue.card .id {
+  display: block;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: .5em 0 1em;
+}
 @media only screen and (min-width: 1920px) {
   html,
   body {
