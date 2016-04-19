@@ -10,9 +10,29 @@
         }
     }
 
-    footer {
+    .footer {
         color: @weekly-light-gray;
         margin-top: 1em;
         padding-top: 1em;
+
+        a {
+            color: inherit;
+            transition: color @transition;
+            &:hover, &:active {
+                color: @weekly-gray;
+            }
+        }
+    }
+
+    .weekly.quoted {
+        .quote {
+            opacity: 0;
+            transition: opacity @transition;
+            ::before { content: '「'; }
+            ::after { content: '」'; }
+        }
+        &:hover .quote {
+            opacity: .99;
+        }
     }
 }
