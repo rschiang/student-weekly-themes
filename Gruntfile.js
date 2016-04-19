@@ -19,7 +19,8 @@ module.exports = function(grunt) {
                     ],
                 },
                 files: {
-                    'assets/weekly.css': 'src/weekly.less'
+                    'assets/weekly.css': 'src/weekly.less',
+                    'assets/citadel.css': 'src/citadel.less'
                 }
             }
         }
