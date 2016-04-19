@@ -15,12 +15,8 @@
         margin-top: 1em;
         padding-top: 1em;
 
-        a {
+        &:not(:hover) a {
             color: inherit;
-            transition: color @transition;
-            &:hover, &:active {
-                color: @weekly-gray;
-            }
         }
     }
 
