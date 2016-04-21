@@ -13,15 +13,28 @@
     }
 
     .footer {
-        color: @weekly-light-gray;
         margin-top: 1em;
         padding-top: 1em;
-
-        &:not(:hover) a {
-            color: inherit;
-        }
     }
+}
 
+// Generic internal page
+.weekly.citadel {
+    padding-left: 6rem;
+
+    .footer {
+        margin-top: 2em;
+        padding-bottom: 2em;
+    }
+}
+
+// Shared styles
+.weekly.footer {
+    color: @weekly-light-gray;
+
+    &:not(:hover) a {
+        color: inherit;
+    }
 }
 
 .weekly.quoted {
