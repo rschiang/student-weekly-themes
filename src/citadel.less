@@ -22,15 +22,16 @@
         }
     }
 
-    .weekly.quoted {
-        .quote {
-            opacity: 0;
-            transition: opacity @transition;
-            ::before { content: '「'; }
-            ::after { content: '」'; }
-        }
-        &:hover .quote {
-            opacity: .99;
-        }
+}
+
+.weekly.quoted {
+    .quote {
+        opacity: 0;
+        transition: opacity @transition;
+        ::before { content: '「'; }
+        ::after { content: '」'; }
+    }
+    &:hover .quote {
+        opacity: .99;
     }
 }
