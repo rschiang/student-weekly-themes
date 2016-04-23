@@ -210,7 +210,7 @@
                         <div class="field">
                             <label>期數 #</label>
                             <div class="ui transparent big input">
-                                <input type="text" placeholder="期數" value="121" readonly />
+                                <input type="number" placeholder="期數" value="121" readonly />
                             </div>
                         </div>
                         <div class="field">
@@ -224,21 +224,35 @@
                     <div class="field">
                         <label>範本</label>
                     </div>
-                    <div class="equal width fields">
-                        <div class="field">
-                            <div class="ui radio checkbox">
-                                <input type="radio" id="template-0" name="template" value="0" class="hidden" checked />
-                                <label for="template-0">現代</label>
+                    <div class="ui three stackable cards">
+                        <a class="weekly selectable card" data-id="0">
+                            <div class="image">
+                                <img src="assets/119.jpg" />
                             </div>
-                            <img alt="預覽" width="90%" height="auto" src="assets/119.jpg" />
-                        </div>
-                        <div class="field">
-                            <div class="ui radio checkbox">
-                                <input type="radio" id="template-1" name="template" value="1" class="hidden" />
-                                <label for="template-1">傳統</label>
+                            <div class="content">
+                                <div class="header">
+                                    <input type="radio" id="template-0" name="template" value="0" checked />
+                                    現代
+                                </div>
+                                <div class="description">
+                                    由名設計師 Sit Down Please 製作。
+                                </div>
                             </div>
-                            <img alt="預覽" width="90%" height="auto" src="assets/119.jpg" />
-                        </div>
+                        </a>
+                        <a class="weekly selectable card" data-id="1">
+                            <div class="image">
+                                <img src="assets/119.jpg" />
+                            </div>
+                            <div class="content">
+                                <div class="header">
+                                    <input type="radio" id="template-1" name="template" value="1" />
+                                    2012
+                                </div>
+                                <div class="description">
+                                    由不知名設計師製作。
+                                </div>
+                            </div>
+                        </a>
                     </div>
                 </form>
             </div>
@@ -262,6 +276,9 @@
                 }
             })
             .modal('show');
+        });
+        $('.weekly.selectable.card').click(function() {
+            $('#template-' + $(this).data('id')).prop('checked', true);
         });
         </script>
         <footer class="weekly quoted footer">
