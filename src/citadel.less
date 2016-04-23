@@ -22,9 +22,12 @@
 .weekly.citadel {
     padding-left: 6rem;
 
-    .page.header > h1 {
-        // Semantic default value
-        margin-top: calc(2rem - .14285em);
+    .page.header {
+        // Semantic would cancel out margin by default
+        padding-top: calc(2rem - .14285em);
+        > h1 {
+            margin-top: 0;
+        }
     }
 
     .footer {
