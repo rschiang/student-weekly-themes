@@ -205,13 +205,48 @@
                 建立新刊
             </div>
             <div class="content">
-                <p>確定要建立新刊？</p>
+                <form class="ui inverted form" action="#">
+                    <div class="two fields">
+                        <div class="field">
+                            <label>期數 #</label>
+                            <div class="ui transparent big input">
+                                <input type="text" placeholder="期數" value="121" readonly />
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label>發行日期</label>
+                            <div class="ui transparent big icon input">
+                                <input type="date" placeholder="YYYY-MM-DD" value="2016-04-25" />
+                                <i class="calendar icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label>範本</label>
+                    </div>
+                    <div class="equal width fields">
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" id="template-0" name="template" value="0" class="hidden" checked />
+                                <label for="template-0">現代</label>
+                            </div>
+                            <img alt="預覽" width="90%" height="auto" src="assets/119.jpg" />
+                        </div>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" id="template-1" name="template" value="1" class="hidden" />
+                                <label for="template-1">傳統</label>
+                            </div>
+                            <img alt="預覽" width="90%" height="auto" src="assets/119.jpg" />
+                        </div>
+                    </div>
+                </form>
             </div>
             <div class="actions">
                 <div class="ui cancel basic inverted button">
                     返回
                 </div>
-                <div class="ui approve basic inverted button">
+                <div class="ui approve basic blue inverted button">
                     <i class="add icon"></i>
                     建立
                 </div>
