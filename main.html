@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="assets/semantic.min.css" />
     <link rel="stylesheet" href="assets/citadel.css" />
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
 
     <title>NTU Student Weekly</title>
 </head>
@@ -20,7 +21,7 @@
     <div class="ui container">
         <header class="weekly page header">
             <div class="ui floated right menu">
-                <a class="item" href="#">
+                <a class="item" id="create-issue-button" href="#">
                     <i class="add icon"></i>建立新刊
                 </a>
                 <a class="item" href="index.html">登出</a>
@@ -198,6 +199,36 @@
                 </div>
             </a>
         </div>
+        <div id="create-issue-dialog" class="ui small basic modal">
+            <div class="ui icon header">
+                <i class="wizard icon"></i>
+                建立新刊
+            </div>
+            <div class="content">
+                <p>確定要建立新刊？</p>
+            </div>
+            <div class="actions">
+                <div class="ui cancel basic inverted button">
+                    返回
+                </div>
+                <div class="ui approve basic inverted button">
+                    <i class="add icon"></i>
+                    建立
+                </div>
+            </div>
+        </div>
+        <script>
+        $('#create-issue-button').click(function() {
+            $('#create-issue-dialog')
+            .modal({
+                closable: false,
+                onApprove: function() {
+                    window.reload();
+                }
+            })
+            .modal('show');
+        });
+        </script>
         <footer class="weekly quoted footer">
             <div class="ui divider"></div>
             © 2016 <a href="https://ntustudents.org">國立臺灣大學學生會</a><br />
