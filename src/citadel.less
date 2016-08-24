@@ -49,8 +49,8 @@
     .quote {
         opacity: 0;
         transition: opacity @transition;
-        ::before { content: '「'; }
-        ::after { content: '」'; }
+        &::before { content: '\300c'; }
+        &::after { content: '\300d'; }
     }
     &:hover .quote {
         opacity: .99;
