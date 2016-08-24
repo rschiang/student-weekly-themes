@@ -7,7 +7,7 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
         watch: {
-            files: ['src/*.less', 'themes/*/styles.less'],
+            files: 'src/*.less',
             tasks: ['less']
         },
         less: {
@@ -20,8 +20,7 @@ module.exports = function(grunt) {
                 },
                 files: {
                     'assets/weekly.css': 'src/weekly.less',
-                    'assets/citadel.css': 'src/citadel.less',
-                    'themes/2012/styles.css': 'themes/2012/styles.less'
+                    'assets/citadel.css': 'src/citadel.less'
                 }
             }
         }
