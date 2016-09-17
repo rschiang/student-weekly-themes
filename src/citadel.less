@@ -36,6 +36,38 @@
     }
 }
 
+// Edit page
+.weekly.edit-page {
+    .container {
+        padding: 0 1em;
+    }
+
+    .preview {
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #fafafa;
+        box-shadow: inset 0 6px 10px 0 rgba(0, 0, 0, 0.3);
+    }
+
+    /* .ui.container small monitor width */
+    @media @desktop {
+        margin-right: 62.5%;
+
+        .container {
+            padding: 0 2em;
+        }
+
+        .preview {
+            position: absolute;
+            width: 62.5%;
+            top: 0; right: 0; bottom: 0;
+            border-width: 0 0 0 1px;
+        }
+    }
+}
+
 // Shared styles
 .weekly.footer {
     color: @weekly-light-gray;
