@@ -9,7 +9,7 @@
 
     <title>NTU Student Weekly</title>
 </head>
-<body class="weekly citadel">
+<body class="weekly citadel" style="padding-right: calc(62.5% + 32px);">
     <div class="ui inverted labeled icon left fixed vertical menu">
         <a class="active item" href="#">
             <i class="newspaper icon"></i>期刊
@@ -18,19 +18,18 @@
             <i class="setting icon"></i>版面
         </a>
     </div>
-    <div class="ui stackable padded grid" style="padding: 0;">
-        <div class="six wide column">
+    <div class="ui container">
+        <header class="weekly page header">
             <h1>第 113 期</h1>
-            <p>編輯內容。</p>
-            <footer class="weekly quoted footer">
-                <div class="ui divider"></div>
-                © 2016 <a href="https://ntustudents.org">國立臺灣大學學生會</a><br />
-                <q class="quote">我們貢獻這所大學之精神於宇宙。</q>
-            </footer>
-        </div>
-        <iframe class="ten wide column" src="weekly/issue/90.html" style="height: 100vh; padding: 0; border: 0; box-shadow: rgba(0,0,0,.75) 0 0 3px;">
-        </iframe>
+            <div class="ui hidden clearing divider"></div>
+        </header>
+        <footer class="weekly quoted footer">
+            <div class="ui divider"></div>
+            © 2016 <a href="https://ntustudents.org">國立臺灣大學學生會</a><br />
+            <q class="quote">我們貢獻這所大學之精神於宇宙。</q>
+        </footer>
     </div>
+    <iframe class="weekly preview" src="weekly/issue/90.html" style="position: absolute; height: 100vh; width: 62.5%; top: 0; right: 0; padding: 0; border: 0; box-shadow: rgba(0,0,0,.75) 0 0 3px;"></iframe>
     <script src="assets/semantic.min.js"></script>
 </body>
 </html>
