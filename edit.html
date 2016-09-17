@@ -25,12 +25,17 @@
         </a>
     </div>
     <div class="weekly container">
-        <header class="weekly page header">
-            <h1>第 90 期</h1>
+        <header class="weekly page ui header">
+            <h1>
+                第 90 期
+                <div class="sub header">
+                    2015/3/16 發行
+                </div>
+            </h1>
         </header>
         <h3>臺大學生會</h3>
         <div class="ui divided link items">
-            <div class="item">
+            <div class="item" data-item-id="1">
                 <div class="ui tiny image">
                     <img src="assets/119.jpg" />
                 </div>
@@ -42,7 +47,7 @@
                     <div class="description">近期學生會、學代會、與研協會一同推動的「陳文成事件紀念廣場」命名連署，是為了向校方表達：我們只接受以陳文成博士之全名當作廣場名稱，任何曖昧不清、令人有暇想空間之命名，我們一概不能接受。希望大家理解我們的想法，若是連紀念廣場之命名都迂迴而不敢直面，那命名之理由何在？紀念之價值何在？</div>
                 </div>
             </div>
-            <div class="item">
+            <div class="item" data-item-id="2">
                 <div class="ui tiny image">
                     <img src="assets/118.jpg" />
                 </div>
@@ -63,7 +68,7 @@
         </div>
         <h3>文章精選</h3>
         <div class="ui divided link items">
-            <div class="item">
+            <div class="item" data-item-id="3">
                 <div class="ui tiny image">
                     <img src="assets/120.jpg" />
                 </div>
@@ -140,10 +145,78 @@
             </div>
         </div>
     </div>
+    <div id="edit-article-dialog" class="ui small basic modal">
+        <div class="ui icon header">
+            <i class="write icon"></i>
+            編輯文章
+        </div>
+        <div class="content">
+            <div class="ui stackable grid">
+                <div class="four wide column">
+                    <img class="ui fluid image" src="assets/117.png" />
+                </div>
+                <div class="twelve wide column">
+                    <form class="ui inverted form" action="#">
+                        <div class="field">
+                            <label>文章標題</label>
+                            <div class="ui transparent big input">
+                                <input type="text" placeholder="標題" value="《花火時代》特刊──公民參與年度回顧出刊" />
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label>內文</label>
+                            <textarea rows="3"></textarea>
+                        </div>
+                        <div class="two fields">
+                            <div class="field">
+                                <label>來源</label>
+                                <select class="ui dropdown">
+                                    <option>學生會</option>
+                                    <option>新聞部</option>
+                                    <option>學術部</option>
+                                    <option>福利部</option>
+                                    <option>活動部</option>
+                                    <option>文化部</option>
+                                    <option>秘書部</option>
+                                    <option>選委會</option>
+                                    <option>財務部</option>
+                                    <option>法制部</option>
+                                    <option>公關部</option>
+                                </select>
+                            </div>
+                            <div class="field">
+                                <label>照片</label>
+                                <input type="file" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="actions">
+            <div class="ui cancel basic inverted button">
+                返回
+            </div>
+            <div class="ui approve basic blue inverted button">
+                <i class="add icon"></i>
+                建立
+            </div>
+        </div>
+    </div>
     <script src="assets/semantic.min.js"></script>
     <script>
     $('button[data-add-to-column]').click(function() {
         $('#create-article-dialog')
+        .modal({
+            closable: false,
+            onApprove: function() {
+                window.reload();
+            }
+        })
+        .modal('show');
+    });
+    $('.item[data-item-id]').click(function() {
+        $('#edit-article-dialog')
         .modal({
             closable: false,
             onApprove: function() {
