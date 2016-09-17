@@ -55,7 +55,7 @@
                 </div>
             </div>
             <div>
-                <button class="ui right floated basic button">
+                <button class="ui right floated basic button" data-add-to-column="ntusa">
                     <i class="add icon"></i>新增文章
                 </button>
                 <div class="ui hidden clearing divider"></div>
@@ -76,7 +76,7 @@
                 </div>
             </div>
             <div>
-                <button class="ui right floated basic button">
+                <button class="ui right floated basic button" data-add-to-column="articles">
                     <i class="add icon"></i>新增文章
                 </button>
                 <div class="ui hidden clearing divider"></div>
@@ -89,6 +89,70 @@
         </footer>
     </div>
     <iframe class="weekly preview" src="weekly/issue/90.html"></iframe>
+    <div id="create-article-dialog" class="ui small basic modal">
+        <div class="ui icon header">
+            <i class="write icon"></i>
+            新增文章
+        </div>
+        <div class="content">
+            <form class="ui inverted form" action="#">
+                <div class="field">
+                    <label>文章標題</label>
+                    <div class="ui transparent big input">
+                        <input type="text" placeholder="標題" />
+                    </div>
+                </div>
+                <div class="field">
+                    <label>內文</label>
+                    <textarea rows="3"></textarea>
+                </div>
+                <div class="two fields">
+                    <div class="field">
+                        <label>來源</label>
+                        <select class="ui dropdown">
+                            <option>學生會</option>
+                            <option>新聞部</option>
+                            <option>學術部</option>
+                            <option>福利部</option>
+                            <option>活動部</option>
+                            <option>文化部</option>
+                            <option>秘書部</option>
+                            <option>選委會</option>
+                            <option>財務部</option>
+                            <option>法制部</option>
+                            <option>公關部</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label>照片</label>
+                        <input type="file" />
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="actions">
+            <div class="ui cancel basic inverted button">
+                返回
+            </div>
+            <div class="ui approve basic blue inverted button">
+                <i class="add icon"></i>
+                建立
+            </div>
+        </div>
+    </div>
     <script src="assets/semantic.min.js"></script>
+    <script>
+    $('button[data-add-to-column]').click(function() {
+        $('#create-article-dialog')
+        .modal({
+            closable: false,
+            onApprove: function() {
+                window.reload();
+            }
+        })
+        .modal('show');
+    });
+    $('.ui.dropdown').dropdown();
+    </script>
 </body>
 </html>
